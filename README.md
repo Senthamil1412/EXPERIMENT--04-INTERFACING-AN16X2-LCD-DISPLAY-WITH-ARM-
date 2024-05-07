@@ -173,14 +173,46 @@ https://engineeringxpert.com/wp-content/uploads/2022/04/26.png
 
 
 ## STM 32 CUBE PROGRAM :
+```
+#include "main.h"
+#include "lcd.h"
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+  MX_GPIO_Init();
+  Lcd_PortType ports[] = { GPIOA, GPIOA, GPIOA, GPIOA };
+     Lcd_PinType pins[] = {GPIO_PIN_3, GPIO_PIN_2, GPIO_PIN_1, GPIO_PIN_0};
+     Lcd_HandleTypeDef lcd;
+     lcd = Lcd_create(ports, pins, GPIOB, GPIO_PIN_0, GPIOB, GPIO_PIN_1, LCD_4_BIT_MODE);
+     Lcd_cursor(&lcd, 0,1);
+     Lcd_string(&lcd, "Afsar Jumail s");
+ 
+  while (1)
+  {
+	  for ( int x = 1; x <= 200 ; x++ )
+	  	   	 	  {
+	  	   		  Lcd_cursor(&lcd, 1,7);
+	  	   	 	  Lcd_int(&lcd, x);
+	  	   	 	  HAL_Delay (1000);
+	  	   	 	  }
+  }
+}
+```
 
 
 
 
 ## Output screen shots of proteus  :
+![328160699-b75ef012-49ba-4e98-9409-06921d57c864](https://github.com/Senthamil1412/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/119120228/38efc366-c864-4848-9d8b-0a9f18d543d0)
+
  
  
  ## CIRCUIT DIAGRAM (EXPORT THE GRAPHICS TO PDF AND ADD THE SCREEN SHOT HERE): 
+ ![328160800-27abac81-a7a1-4a27-810d-84f0ea7869ae](https://github.com/Senthamil1412/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/119120228/48239227-9bb4-4ca6-9204-8514ab6ac940)
+
  
  
 ## Result :
