@@ -206,7 +206,7 @@ int main(void)
 
 
 ## Output screen shots of proteus  :
-![328160699-b75ef012-49ba-4e98-9409-06921d57c864](https://github.com/Senthamil1412/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/119120228/38efc366-c864-4848-9d8b-0a9f18d543d0)
+![Screenshot 2024-05-13 120218](https://github.com/Senthamil1412/EXPERIMENT--04-INTERFACING-AN16X2-LCD-DISPLAY-WITH-ARM-/assets/119120228/e100f7c2-7457-4def-8531-7235372b435e)
 
  
  
